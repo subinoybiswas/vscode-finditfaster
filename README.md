@@ -141,7 +141,7 @@ command that can show you which paths are currently being indexed.
 
 ➥ I don't the VS Code API enables me to do this. Shoot me a message if you think I'm mistaken and
 I'll try to make this better.  
- Update: Added a setting `find-it-faster-fix.general.killTerminalAfterUse`. When true, it will kill the
+ Update: Added a setting `find-it-faster.general.killTerminalAfterUse`. When true, it will kill the
 extension's terminal which may result in VS Code focusing the previous one. It may help you.
 
 ### 🐞 _I found a bug!_

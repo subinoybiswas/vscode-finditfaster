@@ -48,7 +48,7 @@ jobs:
       # - uses: actions/upload-artifact@v2
       #   if: runner.os == 'Linux'
       #   with:
-      #     name: find-it-faster-fix-vsix
+      #     name: find-it-faster-vsix
       #     path: "*.vsix"
 
   # Unfortunately, this is very redundant.

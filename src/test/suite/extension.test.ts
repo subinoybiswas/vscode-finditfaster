@@ -42,15 +42,15 @@ suite("Extension Test Suite", () => {
 
 async function doTheThings() {
   const extension = vscode.extensions.getExtension(
-    "TomRijndorp.find-it-faster-fix"
+    "TomRijndorp.find-it-faster"
   );
   assert(extension);
   const path = extension.extensionPath;
   assert(path);
   // assert (vscode.workspace.workspaceFolders === undefined);
-  // vscode.workspace.getconfiguration().update('find-it-faster-fix.general.defaultsearchlocation', __dirname, vscode.configurationtarget.global)
+  // vscode.workspace.getconfiguration().update('find-it-faster.general.defaultsearchlocation', __dirname, vscode.configurationtarget.global)
   // .then(() => {
-  vscode.commands.executeCommand("find-it-faster-fix.listSearchLocations");
+  vscode.commands.executeCommand("find-it-faster.listSearchLocations");
   // })
   // .then(() => {
   // return vscode.window.activeTerminal?.sendText("flight_check.sh\n");

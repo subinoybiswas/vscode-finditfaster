@@ -277,9 +277,7 @@ function setupConfig(context: vscode.ExtensionContext) {
   const localScript = (x: string) =>
     CFG.forceBashOnWindows && x !== "flight_check"
       ? vscode.Uri.file(
-          `powershell "${
-            path.join(context.extensionPath, commands.findFiles.script) + ".ps1"
-          }"`
+          `powershell "${path.join(context.extensionPath, x) + ".ps1"}"`
         )
       : vscode.Uri.file(
           path.join(context.extensionPath, x) +

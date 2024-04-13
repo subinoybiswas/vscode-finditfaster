@@ -1,5 +1,5 @@
 {
-  "name": "find-it-faster-fix",
+  "name": "find-it-faster-fix-fix",
   "displayName": "FindItFasterFix",
   "publisher": "subinoybiswas",
   "icon": "media/icon.png",
@@ -32,53 +32,53 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:find-it-faster.findFiles",
-    "onCommand:find-it-faster.findFilesWithType",
-    "onCommand:find-it-faster.findWithinFiles",
-    "onCommand:find-it-faster.findWithinFilesWithType",
-    "onCommand:find-it-faster.listSearchLocations"
+    "onCommand:find-it-faster-fix.findFiles",
+    "onCommand:find-it-faster-fix.findFilesWithType",
+    "onCommand:find-it-faster-fix.findWithinFiles",
+    "onCommand:find-it-faster-fix.findWithinFilesWithType",
+    "onCommand:find-it-faster-fix.listSearchLocations"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "find-it-faster.findFiles",
+        "command": "find-it-faster-fix.findFiles",
         "title": "Find It Faster: search file"
       },
       {
-        "command": "find-it-faster.findFilesWithType",
+        "command": "find-it-faster-fix.findFilesWithType",
         "title": "Find It Faster: search file (with type filter)"
       },
       {
-        "command": "find-it-faster.findWithinFiles",
+        "command": "find-it-faster-fix.findWithinFiles",
         "title": "Find It Faster: search within files"
       },
       {
-        "command": "find-it-faster.findWithinFilesWithType",
+        "command": "find-it-faster-fix.findWithinFilesWithType",
         "title": "Find It Faster: search within files (with type filter)"
       },
       {
-        "command": "find-it-faster.listSearchLocations",
+        "command": "find-it-faster-fix.listSearchLocations",
         "title": "Find It Faster: list search locations (modify in extension settings)"
       },
       {
-        "command": "find-it-faster.resumeSearch",
+        "command": "find-it-faster-fix.resumeSearch",
         "title": "Find It Faster: resume last search"
       }
     ],
     "keybindings": [
       {
-        "command": "find-it-faster.findFiles",
+        "command": "find-it-faster-fix.findFiles",
         "mac": "cmd+shift+j",
         "linux": "ctrl+shift+j"
       },
       {
-        "command": "find-it-faster.findWithinFiles",
+        "command": "find-it-faster-fix.findWithinFiles",
         "mac": "cmd+shift+u",
         "linux": "ctrl+shift+u"
       },
       {
-        "command": "find-it-faster.findWithinFilesWithType",
+        "command": "find-it-faster-fix.findWithinFilesWithType",
         "mac": "ctrl+cmd+shift+u",
         "linux": "ctrl+shift+alt+u"
       }
@@ -86,52 +86,52 @@
     "configuration": {
       "title": "FindItFaster",
       "properties": {
-        "find-it-faster.general.hideTerminalAfterSuccess": {
+        "find-it-faster-fix.general.hideTerminalAfterSuccess": {
           "markdownDescription": "Extensions have limited control over the terminal panel. Ideally, it would be possible to automatically switch back to the previous thing you were doing (e.g. hide the terminal, show the terminal you're working on, show the tasks panel if that's what you were on), but we can't. Select here whether you want the terminal to be hidden or remain shown after invoking a command that fails / is canceled.",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.hideTerminalAfterFail": {
+        "find-it-faster-fix.general.hideTerminalAfterFail": {
           "markdownDescription": "Extensions have limited control over the terminal panel. Ideally, it would be possible to automatically switch back to the previous thing you were doing (e.g. hide the terminal, show the terminal you're working on, show the tasks panel if that's what you were on), but we can't. Select here whether you want the terminal to be hidden or remain shown after invoking a command that succeeds.",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.clearTerminalAfterUse": {
+        "find-it-faster-fix.general.clearTerminalAfterUse": {
           "markdownDescription": "Sends a 'clear' command after invoking a terminal command for a cleaner look",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.killTerminalAfterUse": {
+        "find-it-faster-fix.general.killTerminalAfterUse": {
           "markdownDescription": "Kills this extension's terminal such that your previous terminal gets back into focus. Comes with a performance penalty for creating a new terminal on every invocation.",
           "type": "boolean",
           "default": false
         },
-        "find-it-faster.general.showMaximizedTerminal": {
+        "find-it-faster-fix.general.showMaximizedTerminal": {
           "markdownDescription": "Show the terminal in full screen. Works especially nicely if you set the \"hide after succes / fail\" options in these preferences.",
           "type": "boolean",
           "default": false
         },
-        "find-it-faster.general.useGitIgnoreExcludes": {
+        "find-it-faster-fix.general.useGitIgnoreExcludes": {
           "markdownDescription": "Use `.gitignore` entries (if present) to limit search paths",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.useWorkspaceSearchExcludes": {
+        "find-it-faster-fix.general.useWorkspaceSearchExcludes": {
           "markdownDescription": "In order to speed up VS Code's native search functionality, you can use the `search.exclude` setting. If checked, this extension will honor the same exclude patterns (as long as they follow the standard \"gitignore glob style\" that `rg` uses.",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.additionalSearchLocations": {
+        "find-it-faster-fix.general.additionalSearchLocations": {
           "markdownDescription": "Search files in these locations",
           "type": "array",
           "default": []
         },
-        "find-it-faster.general.forceBashOnWindows": {
+        "find-it-faster-fix.general.forceBashOnWindows": {
           "markdownDescription": "Toggle if you use Bash on Windows",
           "type": "boolean",
           "default": false
         },
-        "find-it-faster.general.additionalSearchLocationsWhen": {
+        "find-it-faster-fix.general.additionalSearchLocationsWhen": {
           "markdownDescription": "When to search the files listed in `general.searchLocations`",
           "type": "string",
           "enum": [
@@ -146,12 +146,12 @@
           ],
           "default": "always"
         },
-        "find-it-faster.general.searchWorkspaceFolders": {
+        "find-it-faster-fix.general.searchWorkspaceFolders": {
           "markdownDescription": "Search the folders defined in the workspace",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.searchCurrentWorkingDirectory": {
+        "find-it-faster-fix.general.searchCurrentWorkingDirectory": {
           "markdownDescription": "Search the current working directory (`process.cwd()`)",
           "type": "string",
           "enum": [
@@ -166,62 +166,62 @@
           ],
           "default": "noWorkspaceOnly"
         },
-        "find-it-faster.general.batTheme": {
+        "find-it-faster-fix.general.batTheme": {
           "markdownDescription": "The color theme to use for `bat` (see `bat --list-themes`)",
           "type": "string",
           "default": "1337"
         },
-        "find-it-faster.general.openFileInPreviewEditor": {
+        "find-it-faster-fix.general.openFileInPreviewEditor": {
           "markdownDescription": "When set to `true` files open in a Preview Editor. Use in conjunction with the `workbench.editor.enablePreivew` setting.",
           "type": "boolean",
           "default": false
         },
-        "find-it-faster.findFiles.showPreview": {
+        "find-it-faster-fix.findFiles.showPreview": {
           "markdownDescription": "Show a preview window when searching files",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.findFiles.previewCommand": {
+        "find-it-faster-fix.findFiles.previewCommand": {
           "markdownDescription": "When populated: Used by `fzf` to produce the preview. Use `{}` to indicate the filename. Example: `bat {}`.",
           "type": "string",
           "default": ""
         },
-        "find-it-faster.findFiles.previewWindowConfig": {
+        "find-it-faster-fix.findFiles.previewWindowConfig": {
           "markdownDescription": "When populated: Used by `fzf` to determine position and look of the preview window. See the `fzf` documentation. Example for a horizontal split: `top,50%`.",
           "type": "string",
           "default": ""
         },
-        "find-it-faster.findWithinFiles.showPreview": {
+        "find-it-faster-fix.findWithinFiles.showPreview": {
           "markdownDescription": "Show a preview window when searching within files",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.findWithinFiles.previewCommand": {
+        "find-it-faster-fix.findWithinFiles.previewCommand": {
           "markdownDescription": "When populated: Used by `fzf` to produce the preview when searching within files. Use `{1}` to indicate the filename, `{2}` for the line number. Example using `cat` and `awk` instead of `bat`: `cat {1} | awk '{if (NR>={2}) print}'`.",
           "type": "string",
           "default": ""
         },
-        "find-it-faster.findWithinFiles.previewWindowConfig": {
+        "find-it-faster-fix.findWithinFiles.previewWindowConfig": {
           "markdownDescription": "When populated: Used by `fzf` to determine position and look of the preview window. See the `fzf` documentation. Example for a horizontal split: `top,50%,border-bottom,+{2}+3/3,~3`.",
           "type": "string",
           "default": ""
         },
-        "find-it-faster.findWithinFiles.fuzzRipgrepQuery": {
+        "find-it-faster-fix.findWithinFiles.fuzzRipgrepQuery": {
           "markdownDescription": "By default, matching in \"Find Within Files\" is exact. Enabling this option relaxes the matching by slightly fuzzing the query that is sent to `rg`: it treats whitespaces as wildcards (`.*`). For example, when enabled, the query `function bar` will match `function foobar`. Otherwise, it won't. This setting does not work on Windows at the moment.",
           "type": "boolean",
           "default": false
         },
-        "find-it-faster.advanced.disableStartupChecks": {
+        "find-it-faster-fix.advanced.disableStartupChecks": {
           "markdownDescription": "By default, we check that you have `fzf`, `rg`, and `bat` on your path. If you'd like to disable these checks because you're getting creative (e.g. use `cat` instead of `bat`), check this box. Obviously you may see errors on your terminal if we do call one of these programs when they are not present!",
           "type": "boolean",
           "default": false
         },
-        "find-it-faster.advanced.useEditorSelectionAsQuery": {
+        "find-it-faster-fix.advanced.useEditorSelectionAsQuery": {
           "markdownDescription": "By default, if you have an active editor with a text selection, we'll use that to populate the prompt in `fzf` such that it will start filtering text directly. Uncheck to disable.",
           "type": "boolean",
           "default": true
         },
-        "find-it-faster.general.restoreFocusTerminal": {
+        "find-it-faster-fix.general.restoreFocusTerminal": {
           "markdownDescription": "When enabled, the extension will restore focus to the previously active terminal after executing a command. This is useful if you frequently switch between the terminal and other parts of VS Code. Note: due to limitations in VS Code, will not focus other panel tabs such as problems/output/etc.",
           "type": "boolean",
           "default": false

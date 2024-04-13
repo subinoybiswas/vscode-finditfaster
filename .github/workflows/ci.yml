@@ -11,10 +11,9 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest]  # , windows-latest] Failing for unknown reason and we don't really test Windows anyway...
+        os: [macos-latest, ubuntu-latest] # , windows-latest] Failing for unknown reason and we don't really test Windows anyway...
     runs-on: ${{ matrix.os }}
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -49,7 +48,7 @@ jobs:
       # - uses: actions/upload-artifact@v2
       #   if: runner.os == 'Linux'
       #   with:
-      #     name: find-it-faster-vsix
+      #     name: find-it-faster-fix-vsix
       #     path: "*.vsix"
 
   # Unfortunately, this is very redundant.
@@ -60,7 +59,6 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 

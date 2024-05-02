@@ -1,7 +1,7 @@
 {
   "name": "find-it-faster",
   "displayName": "FindItFaster",
-  "publisher": "TomRijndorp",
+  "publisher": "subinoybiswas",
   "icon": "media/icon.png",
   "repository": {
     "url": "https://github.com/tomrijndorp/vscode-finditfaster"
@@ -126,7 +126,7 @@
           "type": "array",
           "default": []
         },
-        "find-it-faster.general.forceBashOnWindows": {
+        "find-it-faster.advanced.forceBashOnWindows": {
           "markdownDescription": "Toggle if you use Bash on Windows",
           "type": "boolean",
           "default": false

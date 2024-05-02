@@ -259,7 +259,7 @@ const CFG: Config = {
   killTerminalAfterUse: false,
   fuzzRipgrepQuery: false,
   restoreFocusTerminal: false,
-  forceBashOnWindows: false,
+  forceBashOnWindows: true,
 };
 
 /** Ensure that whatever command we expose in package.json actually exists */
@@ -372,7 +372,7 @@ function updateConfigWithUserSettings() {
   );
   CFG.fuzzRipgrepQuery = getCFG("findWithinFiles.fuzzRipgrepQuery");
   CFG.restoreFocusTerminal = getCFG("general.restoreFocusTerminal");
-  CFG.forceBashOnWindows = getCFG("general.forceBashOnWindows");
+  CFG.forceBashOnWindows = getCFG("advanced.forceBashOnWindows");
 }
 
 function collectSearchLocations() {
